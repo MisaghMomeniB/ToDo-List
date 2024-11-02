@@ -132,3 +132,15 @@ label {
     cursor: pointer; /* Pointer cursor */
     transition: background-color 0.2s, transform 0.2s; /* Smooth transitions */
 }
+
+/* Hover effects for buttons */
+.edit-btn:hover, .delete-btn:hover, .complete-btn:hover {
+    background-color: #556B2F; /* Darker green on hover */
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+/* Styles for completed tasks */
+.completed {
+    text-decoration: line-through; /* Strike-through text */
+    color: #A9A9A9; /* Light grey color for completed tasks */
+}
