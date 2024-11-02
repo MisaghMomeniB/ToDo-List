@@ -55,3 +55,19 @@ label {
     margin-bottom: 10px; /* Space below label */
     font-size: 16px; /* Font size for label */
 }
+
+#todo-input {
+    flex: 1; /* Allow input to take available space */
+    padding: 15px; /* Increased inner padding for comfort */
+    border: 2px solid #3E4C40; /* Dark green border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 18px; /* Slightly larger font size */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    color: #3E4C40; /* Text color */
+    outline: none; /* Remove default outline on focus */
+}
+
+#todo-input:focus {
+    border-color: #556B2F; /* Lighter green border on focus */
+    box-shadow: 0 0 10px rgba(85, 107, 47, 0.8); /* Glowing effect */
+}
