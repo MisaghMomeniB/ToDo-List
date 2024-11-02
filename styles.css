@@ -12,3 +12,13 @@ body {
     min-height: 100vh; /* Full viewport height */
     background: linear-gradient(to bottom right, #D9E3D0, #B7C9A4); /* Soft gradient background */
 }
+
+.container {
+    width: 90%; /* Responsive width */
+    max-width: 600px; /* Increased maximum width for a larger container */
+    background-color: #FFF; /* White background for the container */
+    border-radius: 20px; /* Increased rounding for a softer look */
+    padding: 30px; /* Increased inner spacing */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    text-align: center; /* Centered text */
+}
