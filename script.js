@@ -68,3 +68,7 @@ function handleTaskAction(event) {
         todoItem.remove(); // Remove the task from the list
     }
 }
+
+// Event listeners
+document.getElementById('add-btn').addEventListener('click', addTask); // Add task on button click
+document.getElementById('todo-list').addEventListener('click', handleTaskAction); // Handle clicks on the todo list
