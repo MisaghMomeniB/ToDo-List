@@ -71,3 +71,21 @@ label {
     border-color: #556B2F; /* Lighter green border on focus */
     box-shadow: 0 0 10px rgba(85, 107, 47, 0.8); /* Glowing effect */
 }
+
+#add-btn {
+    margin-left: 10px; /* Space between input and button */
+    padding: 15px 20px; /* Increased padding for button */
+    background-color: #556B2F; /* Dark green background */
+    border: none; /* No border */
+    color: white; /* White text color */
+    font-size: 24px; /* Larger font size */
+    font-weight: bold; /* Bold font */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s; /* Smooth transition */
+}
+
+#add-btn:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    background-color: #3E4C40; /* Darker green on hover */
+}
