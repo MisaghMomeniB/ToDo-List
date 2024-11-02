@@ -22,3 +22,19 @@ body {
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
     text-align: center; /* Centered text */
 }
+
+.title, .label, .datetime {
+    color: #3E4C40; /* Dark green color for titles, labels, and date/time */
+}
+
+.title {
+    font-size: 32px; /* Increased title font size for prominence */
+    font-weight: bold; /* Bold title */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.datetime {
+    color: #7D7D7D; /* Grey color for date/time */
+    font-size: 16px; /* Slightly larger font size for date/time */
+    margin-bottom: 20px; /* Space below date/time */
+}
