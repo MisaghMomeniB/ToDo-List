@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box; /* Ensures padding and border are included in the total width and height */
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+    font-family: 'Arial', sans-serif; /* Set default font for the application */
+}
+
+body {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full viewport height */
+    background: linear-gradient(to bottom right, #D9E3D0, #B7C9A4); /* Soft gradient background */
+}
