@@ -89,3 +89,22 @@ label {
     transform: scale(1.05); /* Scale up on hover */
     background-color: #3E4C40; /* Darker green on hover */
 }
+
+#todo-list {
+    list-style: none; /* Remove default list style */
+    max-height: 300px; /* Maximum height for scrolling */
+    overflow-y: auto; /* Scrollable if overflowing */
+    padding: 0; /* Remove default padding */
+}
+
+.todo-item {
+    background-color: #E8E8E4; /* Light grey background for tasks */
+    color: #3E4C40; /* Dark green text color */
+    padding: 12px; /* Inner padding */
+    border-radius: 8px; /* Rounded corners */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between content and buttons */
+    margin-bottom: 10px; /* Space between tasks */
+    animation: slideIn 0.4s forwards; /* Slide in animation */
+}
