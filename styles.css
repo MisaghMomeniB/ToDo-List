@@ -38,3 +38,15 @@ body {
     font-size: 16px; /* Slightly larger font size for date/time */
     margin-bottom: 20px; /* Space below date/time */
 }
+
+.input-section {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: stretch; /* Stretch elements to full width */
+    margin-bottom: 30px; /* Increased space below input section */
+}
+
+.input-container {
+    display: flex; /* Use flexbox for the input and button */
+    align-items: center; /* Center items vertically */
+}
