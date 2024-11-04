@@ -307,8 +307,6 @@ label {
 ---
 # Line-by-line Code Analysis ( JavaScript )
 
-Sure! Let’s go through the JavaScript code line by line, explaining what each part does and why it’s structured that way.
-
 ### 1. Update Date and Time Every Second
 
 ```javascript
