@@ -1,27 +1,27 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Declares the document type and sets the language to English -->
+<html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- Sets the character encoding for the document to UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures responsive design on mobile devices -->
-    <title>ToDo-List</title> <!-- Sets the title of the web page that appears in the browser tab -->
-    <link rel="stylesheet" href="styles.css"> <!-- Links to the external CSS file for styling the application -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List with Timestamp</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container"> <!-- Main container for the Todo List application -->
-        <h1 class="title">Todo List</h1> <!-- Main title of the application -->
-        <p class="datetime" id="current-datetime"></p> <!-- Placeholder for displaying the current date and time -->
+    <div class="container">
+        <h1 class="title">Todo List</h1>
+        <p class="datetime" id="current-datetime"></p>
 
-        <div class="input-section"> <!-- Section for the input field and button to add new tasks -->
-            <label for="todo-input">New Task</label> <!-- Label for the input field, linked by 'for' attribute -->
-            <div class="input-container"> <!-- Container for the input and button -->
-                <input type="text" id="todo-input" placeholder="Add your new task..." required> <!-- Input field for entering a new task -->
-                <button id="add-btn">Add Task</button> <!-- Button to add the task from the input field to the list -->
+        <div class="input-section">
+            <label for="todo-input">New Task</label>
+            <div class="input-container">
+                <input type="text" id="todo-input" placeholder="Add your new task..." required>
+                <button id="add-btn">Add Task</button>
             </div>
         </div>
 
-        <ul id="todo-list"></ul> <!-- Unordered list to display the list of tasks; initially empty -->
+        <ul id="todo-list"></ul> <!-- Task list goes here -->
     </div>
 
-    <script src="script.js"></script> <!-- Links to the external JavaScript file for functionality -->
+    <script src="script.js"></script>
 </body>
 </html>
