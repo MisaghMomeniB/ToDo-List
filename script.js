@@ -13,88 +13,72 @@ function updateDateTime() {
     document.getElementById('current-datetime').innerText = now.toLocaleString('en-US', options);
 }
 
-// Call the function once to set initial date and time
+// Initial call to set date and time, and interval for updates
 updateDateTime();
-// Update date and time every second
 setInterval(updateDateTime, 1000);
-
-// Function to create a new task element
-function createTaskElement(taskText) {
-    const todoItem = document.createElement('li'); // Create a new list item
-    todoItem.className = 'todo-item'; // Set the class for styling
-    todoItem.innerHTML = `
-        <span class="task-text">${taskText}</span>
-        <button class="complete-btn">✔</button>
-        <button class="edit-btn">✏</button>
-        <button class="delete-btn">✖</button>
-    `;
-    return todoItem; // Return the created task element
-}
-
-// Function to add a new task
-function addTask() {
-    const input = document.getElementById('todo-input');
-    const taskText = input.value.trim(); // Get trimmed input value
-
-    if (!taskText) {
-        alert("Please enter a task."); // Alert if the input is empty
-        return; // Exit if no task is provided
-    }
-
-    const todoList = document.getElementById('todo-list');
-    const todoItem = createTaskElement(taskText); // Create a new task element
-    todoList.appendChild(todoItem); // Append the new task to the list
-    input.value = ""; // Clear the input field
-}
-
-// Function to handle task actions (complete, edit, delete)
-function handleTaskAction(event) {
-    const target = event.target; // Get the clicked element
-    const todoItem = target.closest('.todo-item'); // Get the parent list item
-
-    if (!todoItem) return; // If no todo item, exit
-
-    if (target.classList.contains('complete-btn')) {
-        const taskText = todoItem.querySelector('.task-text');
-        todoItem.classList.toggle('completed'); // Toggle completed class
-        taskText.innerHTML += todoItem.classList.contains('completed') ? ' &#10003;' : ''; // Update checkmark
-    } else if (target.classList.contains('edit-btn')) {
-        const taskText = todoItem.querySelector('.task-text');
-        const newTaskText = prompt("Edit your task:", taskText.innerText.replace(' ✔', '')); // Prompt for new task text
-        if (newTaskText) {
-            taskText.innerText = newTaskText.trim(); // Update the task text
-        }
-    } else if (target.classList.contains('delete-btn')) {
-        todoItem.remove(); // Remove the task from the list
-    }
-}
-
-// Event listeners
-document.getElementById('add-btn').addEventListener('click', addTask); // Add task on button click
-document.getElementById('todo-list').addEventListener('click', handleTaskAction); // Handle clicks on the todo list
 
 // Function to create a new task element with a timestamp
 function createTaskElement(taskText) {
     const now = new Date();
     const options = { 
         year: 'numeric', 
-        month: 'long', 
+        month: 'short', 
         day: 'numeric', 
         hour: '2-digit', 
         minute: '2-digit', 
         hour12: true 
     };
-    const timestamp = now.toLocaleString('en-US', options); // Format the current date and time
+    const timestamp = now.toLocaleString('en-US', options);
 
-    const todoItem = document.createElement('li'); // Create a new list item
-    todoItem.className = 'todo-item'; // Set the class for styling
-
+    const todoItem = document.createElement('li');
+    todoItem.className = 'todo-item';
     todoItem.innerHTML = `
         <span class="task-text">${taskText}</span>
-        <span class="timestamp">${timestamp}</span> <!-- Timestamp for the task -->
+        <span class="timestamp">${timestamp}</span>
         <button class="complete-btn">✔</button>
         <button class="edit-btn">✏</button>
         <button class="delete-btn">✖</button>
     `;
-    return todoItem; // Return the created task element
+    return todoItem;
 }
+
+// Function to add a new task
+function addTask() {
+    const input = document.getElementById('todo-input');
+    const taskText = input.value.trim();
+
+    if (!taskText) {
+        alert("Please enter a task.");
+        return;
+    }
+
+    const todoList = document.getElementById('todo-list');
+    const todoItem = createTaskElement(taskText);
+    todoList.appendChild(todoItem);
+    input.value = ""; // Clear input after adding
+}
+
+// Function to handle task actions: complete, edit, delete
+function handleTaskAction(event) {
+    const target = event.target;
+    const todoItem = target.closest('.todo-item');
+
+    if (!todoItem) return;
+
+    const taskText = todoItem.querySelector('.task-text');
+
+    if (target.classList.contains('complete-btn')) {
+        todoItem.classList.toggle('completed');
+    } else if (target.classList.contains('edit-btn')) {
+        const newTaskText = prompt("Edit your task:", taskText.innerText);
+        if (newTaskText) {
+            taskText.innerText = newTaskText.trim();
+        }
+    } else if (target.classList.contains('delete-btn')) {
+        todoItem.remove();
+    }
+}
+
+// Event listeners for adding tasks and handling task actions
+document.getElementById('add-btn').addEventListener('click', addTask);
+document.getElementById('todo-list').addEventListener('click', handleTaskAction);
