@@ -144,3 +144,9 @@ label {
     text-decoration: line-through; /* Strike-through text */
     color: #A9A9A9; /* Light grey color for completed tasks */
 }
+
+.timestamp {
+    font-size: 12px;
+    color: #7D7D7D; /* Lighter grey color for the timestamp */
+    margin-left: 10px; /* Space between task text and timestamp */
+}

@@ -72,3 +72,29 @@ function handleTaskAction(event) {
 // Event listeners
 document.getElementById('add-btn').addEventListener('click', addTask); // Add task on button click
 document.getElementById('todo-list').addEventListener('click', handleTaskAction); // Handle clicks on the todo list
+
+// Function to create a new task element with a timestamp
+function createTaskElement(taskText) {
+    const now = new Date();
+    const options = { 
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric', 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        hour12: true 
+    };
+    const timestamp = now.toLocaleString('en-US', options); // Format the current date and time
+
+    const todoItem = document.createElement('li'); // Create a new list item
+    todoItem.className = 'todo-item'; // Set the class for styling
+
+    todoItem.innerHTML = `
+        <span class="task-text">${taskText}</span>
+        <span class="timestamp">${timestamp}</span> <!-- Timestamp for the task -->
+        <button class="complete-btn">✔</button>
+        <button class="edit-btn">✏</button>
+        <button class="delete-btn">✖</button>
+    `;
+    return todoItem; // Return the created task element
+}
