@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo List with Timestamp</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- Declares the document type as HTML -->
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 to support a wide range of characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets viewport scale for better display on different devices -->
+    <title>ToDo List with Timestamp</title> <!-- Title of the page, displayed in the browser tab -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links to an external CSS file for styling the page -->
 </head>
 <body>
-    <div class="container">
-        <h1 class="title">ToDo List</h1>
-        <p class="datetime" id="current-datetime"></p>
+    <div class="container"> <!-- Creates a main container for all page elements -->
+        <h1 class="title">ToDo List</h1> <!-- Main title of the page, indicating it’s a task list -->
+        <p class="datetime" id="current-datetime"></p> <!-- A paragraph for displaying the current date and time, with an ID to access it in JavaScript -->
 
-        <div class="input-section">
-            <label for="todo-input">New Task</label>
-            <div class="input-container">
-                <input type="text" id="todo-input" placeholder="Add your new task..." required>
-                <button id="add-btn">Add Task</button>
+        <div class="input-section"> <!-- Section for user input -->
+            <label for="todo-input">New Task</label> <!-- Label for the input field, explaining that it’s for a new task -->
+            <div class="input-container"> <!-- Creates a container for the user input field and add button -->
+                <input type="text" id="todo-input" placeholder="Add your new task..." required> <!-- Text input for adding a new task, with a placeholder message and "required" attribute to make the input mandatory -->
+                <button id="add-btn">Add Task</button> <!-- Button to add the task to the list, with a click event to be defined in JavaScript -->
             </div>
         </div>
 
-        <ul id="todo-list"></ul> <!-- Task list goes here -->
+        <ul id="todo-list"></ul> <!-- List where tasks will be added. Starts empty and will be populated with items in JavaScript -->
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- External JavaScript file for adding interactive features to the page -->
 </body>
 </html>
