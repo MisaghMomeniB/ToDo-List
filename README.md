@@ -1,3 +1,7 @@
+![Screenshot from 2024-11-15 10-37-18](https://github.com/user-attachments/assets/c9068596-d185-413d-8056-7c0ef85aabe9)
+
+![Screenshot from 2024-11-15 10-37-07](https://github.com/user-attachments/assets/c8102f8f-a1c7-41ff-954e-4622c7c08d21)
+
 ### HTML (`index.html`)
 
 This file defines the main structure of the To-Do List application.
